@@ -1,0 +1,35 @@
+// TODO 1) เติม field ใน struct Student ให้ครบ: studentID, nickname
+// TODO 2) ใช้ pointer p ชี้ไปที่ s1
+// TODO 3) กำหนดค่าโดยใช้ p->
+// TODO 4) แสดงผลโดยใช้ p->
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Student {
+    //TODO 1) เติม field ใน struct Student ให้ครบ: studentID, nickname
+	string studentID; // รหัสนักศึกษา
+	string nickname;  // ชื่อเล่น
+};
+
+int main() {
+    Student s1;
+    Student* p = nullptr;
+
+    // TODO 2) ใช้ pointer p ชี้ไปที่ s1
+     // TODO: p = &s1;
+	p = &s1;
+
+    // TODO 3) กำหนดค่าโดยใช้ p->
+        // TODO: p->studentID = ...
+	p->studentID = "6812100003";
+        // TODO: p->nickname = ...
+	p->nickname = "Benz";
+
+    // TODO 4) แสดงผลโดยใช้ p->
+    cout << "ID: " << p->studentID << endl;
+    cout << "Nickname: " <<  p->nickname << endl;
+
+    return 0;
+}
+
