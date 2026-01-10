@@ -1,45 +1,52 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-struct Parent {
-    string name[20];
-	string relationship[10];
-
-  
-};
 
 struct Phone {
-    char home[10];
-    char mobile[10];
+    string home;
+    string mobile;
 };
 
-struct Student {
-	string id[10];
-    string Nickname[20];
-	string Lineid[6];
-    Parent myParent;
-	Phone myContact;
+struct Parrent {
+    string name;
+    string relationship;
+    Phone contact;
+};
+
+struct student {
+    string id;
+    string nickname;
+    string lineid;
+    Phone myContact;
+    Parrent myParent;
 };
 
 int main() {
-    Student s;
 
-    cout << "Enter Student Information:\n";
-	cout << "ID: "; cin >> s.id;
-    cout << "Nickname: "; cin >> s.Nickname;
-    cout << "Lineid: "; cin >> s.Lineid;
-	cout << "Name Parent: "; cin >> s.myParent.name;
-    cout << "Phone - Home: "; cin >> s.myContact.home;
-    cout << "Phone - Mobile: "; cin >> s.myContact.mobile;
+    student s1;
 
-    cout << "\n===== Output =====\n";   
-    cout << "ID: " << s.id << "\n";
-    cout << "Nickname: " << s.Nickname << "\n";
-	cout << "Lineid: " << s.Lineid << "\n";
-	cout << "Name Parent: " << s.myParent.name << "\n";
-    cout << "Phone - Home: " << s.myContact.home << "\n";
-    cout << "Phone - Mobile: " << s.myContact.mobile << "\n";
-    cout << endl;
+ 
+    s1.id = "67010001";
+    s1.nickname = "Karn";
+    s1.lineid = "gant.dev";
+
+    s1.myContact.mobile = "081-234-5678";
+    s1.myContact.home = "02-123-4567";
+
+    s1.myParent.name = "Somchai";
+    s1.myParent.relationship = "Father";
+
+    s1.myParent.contact.mobile = "089-987-6543";
+    s1.myParent.contact.home = "02-123-4567";
+
+	cout << "===== Student Information ======  \n";
+    cout << "Student ID: " << s1.id << "\n";
+    cout << "Nickname: " << s1.nickname << "\n";
+    cout << "Student Mobile: " << s1.myContact.mobile << "\n";
+    cout << "Parent Name: " << s1.myParent.name << "\n";
+	cout << "Relationship: " << s1.myParent.relationship << "\n";
+    cout << "Parent Mobile: " << s1.myParent.contact.mobile << "\n";
 
     return 0;
 }
